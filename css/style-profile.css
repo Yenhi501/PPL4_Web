@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #000
+}
+
+.card {
+    /* width: 350px; */
+    background-color: #f9dddd !important;
+    /* border: none; */
+    cursor: pointer;
+    transition: all 0.5s;
+
+    /* background: #fff; */
+    height: 600px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.card:hover .image img {
+    transform: scale(1.5)
+}
+
+.btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.idd1 {
+    font-size: 12px
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+
+.profile-input input {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    background-color: #f5afaf;
+}
+
+.font-profile input{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.profile {
+    background-color: #f5afaf !important;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #e9dada !important;
+    border-color: #f27474 !important;
+    margin-bottom: 10px !important;
+}

@@ -1,0 +1,307 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3.5rem;
+  /*===== Colors =====*/
+  --first-color: #f05e6a;
+  --primary: #f05e6a;
+  --second-color: #f05e6a;
+  --black-color: #111111;
+  --white-color: #FFF;
+  /*===== Font and typography =====*/
+  --body-font: 'Roboto', sans-serif;
+  --biggest-font-size: 1.5rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-bold: 700;
+  /*===== z index =====*/
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3.25rem;
+    --big-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: #fef7f5;
+  color: var(--black-color);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*===== LAYOUT =====*/
+.grid {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+/* Show menu */
+.show {
+  left: 0;
+}
+
+.card__list-icon {
+  font-size: 1rem;
+  color: var(--first-color);
+  margin-right: 0.5rem;
+}
+/*===== HOME =====*/
+.home {
+  height: 100vh;
+  display: grid;
+  row-gap: 3.5rem;
+  grid-template-rows: repeat(2, max-content);
+  overflow: hidden;
+}
+
+/*===== Sneaker =====*/
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  position: relative;
+}
+
+.user__figure {
+  width: 240px;
+  height: 240px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.user__img {
+  width: 313px;
+  position: absolute;
+  top: 16%;
+  left: 9%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(30deg);
+  opacity: 0;
+  filter: drop-shadow(0px 10px 10px rgba(17, 17, 17, 0.4));
+}
+
+.user__img.shows {
+  opacity: 1;
+}
+
+.user__colors {
+  position: absolute;
+  right: 2%;
+}
+
+.user__color {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+.user__color.active {
+  border: 2px solid var(--white-color);
+  box-shadow: 0 0 2px black;
+}
+
+.user__colors-one {
+  background-color: var(--first-color);
+}
+
+.user__colors-two {
+  background-color: var(--black-color);
+}
+
+/*===== Data =====*/
+.data {
+  margin-bottom: 1.5rem;
+}
+
+.data__subtitle {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.data__title {
+  font-size: var(--biggest-font-size);
+  margin-bottom: .5rem;
+}
+
+.data__description {
+  font-size: var(--normal-font-size);
+  color: #ccc !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*===== Size =====*/
+.info__title {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
+
+.info__content {
+  display: flex;
+}
+
+.info__tallas {
+  width: 30px;
+  height: 30px;
+  margin-right: .5rem;
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  line-height: 30px;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+.info__tallas.active {
+  background-color: var(--primary);
+  color: var(--white-color);
+}
+
+/*===== Qty =====*/
+.quantity__title {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
+
+.quantity__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black-color);
+  border-radius: .25rem;
+}
+
+/*===== BREAKPOINTS =====*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .home {
+    row-gap: 1.5rem;
+  }
+  .user__figure {
+    width: 210px;
+    height: 210px;
+  }
+  .user img {
+    width: 230px;
+  }
+  .user__colors {
+    right: 1%;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 480px) {
+  .data__description {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    grid-template-columns: repeat(2, max-content);
+    align-content: center;
+    justify-content: center;
+    column-gap: 6rem;
+    row-gap: 0;
+  }
+  .user {
+    margin-top: 0;
+  }
+  .user__colors {
+    right: -10%;
+  }
+  .user__img {
+    left: -6%;
+  }
+  .actions {
+    margin-bottom: 3rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 968px) {
+
+  .user {
+    margin: 0;
+  }
+  .user__figure {
+    width: 430px;
+    height: 430px;
+  }
+  .user__img {
+    width: 550px;
+    top: 13%;
+  }
+  .user__colors {
+    right: initial;
+    bottom: -3rem;
+  }
+  .user__colors span {
+    display: inline-block;
+  }
+  .info {
+    align-self: center;
+  }
+  .data {
+    margin-bottom: 2.5rem;
+  }
+  .data__subtitle {
+    font-size: 1.5rem;
+  }
+  .data__title {
+    margin-bottom: 1rem;
+  }
+  .info__tallas {
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

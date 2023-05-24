@@ -1,0 +1,152 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color - Blue 210 - Purple 250 - Green 142 - Pink 340*/
+  --hue-color: 210;
+
+  /* HSL color mode */
+  --first-color: #ee4957;
+  --first-color-light: hsl(var(--hue-color), 96%, 69%);
+  --first-color-alt: hsl(var(--hue-color), 96%, 37%);
+  --first-color-lighter: hsl(var(--hue-color), 14%, 96%);
+  --title-color: hsl(var(--hue-color), 12%, 15%);
+  --text-color: hsl(var(--hue-color), 12%, 35%);
+  --text-color-light: hsl(var(--hue-color), 12%, 65%);
+  --white-color: #FFF;
+  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Lato', sans-serif;
+  --pricing-font: 'Rubik', sans-serif;
+  --biggest-font-size: 1.15rem;
+  --normal-font-size: .938rem;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 1.4rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --tiny-font-size: .688rem;
+  }
+}
+
+.buttons-wrap{
+  display: flex;
+  margin-top: 5px;
+}
+
+.section-title{
+  color: #ee4957;
+  margin: 16px 0;
+  font-size: 2.5rem;
+}
+
+.menu__img{
+    width: 98px;
+    height: 98px;
+    align-self: center;
+    margin-bottom: var(--mb-2);
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 4px solid #ee4957;
+  }
+
+
+.card__header-subtitle {
+  display: block;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  margin-top: -10px;
+}
+
+.card__header-title {
+  font-size: var(--biggest-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1);
+}
+
+.menu__detail{
+  margin: 10px 0;
+}
+
+
+.card__list-icon {
+  font-size: 1rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-5);
+}
+
+.card__button-back{
+  padding: 7.8px 0;
+  border: 2px solid #ee4957;
+  color: #ee4957;
+  text-decoration: none;
+  text-align: center;
+  font-size: .7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 3px;
+  border-radius: 18.1px;
+  background-color: #FFF;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.card__button-back:hover{
+  background-color: #f5f5f5;
+}
+
+.card__button:hover{
+  background-color: #f45c68;
+}
+
+.card__button {
+  border: 2px solid #fff;
+  padding: 0.6rem 2.9rem;
+  margin-top: 8px;
+  border: none;
+  font-size: var(--normal-font-size);
+  border-radius: 3rem;
+  background: linear-gradient(to right, #ee4957 0%, rgba(255,131,131, .7) 160%);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: .4s;
+  margin-left: 3px;
+}
+
+
+.card__button:hover {
+  box-shadow: 0 12px 24px hsla(var(--hue-color), 97%, 54%, 0.2);
+}
+
+.menu__container{
+  margin-top: var(--mb-6);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.menu__container{
+  grid-template-columns: repeat(4, 210fr);
+  column-gap: 2.8rem;
+}

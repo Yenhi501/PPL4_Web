@@ -1,0 +1,149 @@
+html {
+  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body {
+  background-color: #fef7f5;
+}
+
+section.calendar {
+  background-color: #29323f;
+  font-family: "Dosis", sans-serif;
+  color: #fff;
+  width: 290px;
+  padding: 45px;
+  position: absolute;
+  top: 54%;
+  left: 68%;
+  transform: translateY(-50%) translateX(-50%);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  margin-top: -150px;
+}
+section.calendar h1 {
+  text-align: center;
+  color: #ee4957;
+  margin: 0 0 30px 0;
+}
+section.calendar form {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+section.calendar form label.weekday {
+  display: inline-block;
+  width: 25px;
+  margin: 8px;
+  text-align: center;
+  color: #999;
+}
+section.calendar form form {
+  margin: 0;
+  padding: 0;
+}
+section.calendar form label.day {
+  display: inline-block;
+  width: 25px;
+  margin: 8px;
+}
+section.calendar form label.day span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  border: 2px solid #29323f;
+  text-align: center;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+section.calendar form label.day span:hover {
+  border-color: #ee4957;
+}
+section.calendar form label.day em {
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border-color: #29323f;
+  width: 3px;
+  height: 3px;
+  background-color: #ee4957;
+  margin-left: 11px;
+  margin-top: 2px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+section.calendar form label.day input[type=text] {
+  border: 0;
+  opacity: 0;
+  position: absolute;
+  margin-top: 40px;
+  left: -45px;
+  width: 380px;
+  height: 1px;
+  padding: 0;
+  outline: none;
+  font-size: 16px;
+  transition: height 0.2s linear, opacity 0.2s linear, color 0.02s linear;
+  color: #fff;
+}
+section.calendar form label.day input[type=text]:focus {
+  opacity: 1;
+  height: 35px;
+  padding: 10px 40px;
+  left: -45px;
+  width: 300px;
+  color: #29323f;
+}
+section.calendar form label.day input[type=text]:focus + span {
+  color: #ee4957;
+  border-color: #ee4957;
+  background: #ee4957;
+  color: #29323f;
+  font-weight: bold;
+  margin-bottom: 65px;
+}
+section.calendar form label.day input[type=text]:focus ~ em {
+  border-radius: 0;
+  border: 5px solid transparent;
+  background: transparent;
+  border-bottom-color: white;
+  margin-top: -62px;
+  margin-left: 7px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  opacity: 1;
+}
+section.calendar form label.day input[type=text]:valid ~ em {
+  display: inline-block;
+  opacity: 1;
+}
+section.calendar form label.day.invalid {
+  opacity: 0;
+  width: 25px;
+  height: 25px;
+}
+section.calendar form label.day.invalid span, section.calendar form label.day.invalid input {
+  display: none;
+}
+section.calendar div.clearfix {
+  clear: both;
+}
+section.calendar div.hidden {
+  display: none;
+}
+.img_calender{
+  width: 160px;
+}
